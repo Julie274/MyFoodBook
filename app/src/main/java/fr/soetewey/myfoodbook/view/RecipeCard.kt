@@ -1,5 +1,6 @@
 package fr.soetewey.myfoodbook.view
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,6 +16,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,15 +26,26 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import fr.soetewey.myfoodbook.data.Ingredient
 import fr.soetewey.myfoodbook.data.Recipe
 import fr.soetewey.myfoodbook.data.Unit
+import fr.soetewey.myfoodbook.nav.Screen
 import fr.soetewey.myfoodbook.ui.theme.MyFoodBookTheme
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RecipeCard(recipe: Recipe){
+fun RecipeCard(
+    navController: NavHostController,
+    recipe: Recipe
+){
 
     Card(
+        onClick = {
+
+            //navController.navigate("recipe_screen")
+            navController.navigate("recipe_screen/${recipe.id}")
+        },
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceVariant,
         ),
@@ -81,6 +94,7 @@ fun RecipeCard(recipe: Recipe){
         }
     }
 }
+/*
 @Preview( showBackground = true )
 @Composable
 fun RecipeCardPreview () {
@@ -96,4 +110,4 @@ fun RecipeCardPreview () {
     MyFoodBookTheme {
         RecipeCard (Recipe("Cookie","", ingredients, step))
     }
-}
+}*/

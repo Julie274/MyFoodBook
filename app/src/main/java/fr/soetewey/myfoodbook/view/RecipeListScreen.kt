@@ -57,7 +57,7 @@ fun RecipeListScreen(
                         verticalArrangement = Arrangement.spacedBy(16.dp)
                     ){
                         items(recipeList){recipe ->
-                            RecipeCard(recipe)
+                            RecipeCard(navController = navController,recipe)
                         }
                     }
                 }
@@ -65,7 +65,7 @@ fun RecipeListScreen(
             floatingActionButton = {
                 FloatingActionButton(
                     onClick = {
-                        navController.navigate(Screen.AddRecipeScreen.route)
+                        navController.navigate("add_recipe_screen")
                     },
                     content = {
                         Icon(imageVector = Icons.Default.Add, contentDescription = "Ajouter")

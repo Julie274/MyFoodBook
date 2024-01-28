@@ -10,8 +10,9 @@ class RecipeRepositoryDummyImpl @Inject constructor(): RecipeRepository{
     override val listRecipe: List<Recipe>
         get() = listOf(
             Recipe(
+                1,
                 "Cookie",
-                "",
+                "Ceci est une image",
                 listOf(
                     Ingredient("",4, Unit.g),
                     Ingredient("",4, Unit.g)
@@ -19,6 +20,7 @@ class RecipeRepositoryDummyImpl @Inject constructor(): RecipeRepository{
                 listOf("","")
             ),
             Recipe(
+                2,
                 "Cookie",
                 "",
                 listOf(
