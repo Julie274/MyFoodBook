@@ -3,5 +3,9 @@ package fr.soetewey.myfoodbook.repository
 import fr.soetewey.myfoodbook.data.Recipe
 
 interface RecipeRepository {
-    val listRecipe : List<Recipe>
+    var listRecipe: List<Recipe>
+
+    suspend fun addRecipe(recipe: Recipe)
+
+    fun removeRecipe(recipe: Recipe)
 }

@@ -9,6 +9,6 @@ import dagger.hilt.android.components.ViewModelComponent
 @InstallIn(ViewModelComponent::class)
 abstract class RecipeRepositoryModule {
     @Binds
-    abstract fun bindRecipeRepository(recipeRepositoryImpl: RecipeRepositoryDummyImpl):
+    abstract fun bindRecipeRepository(recipeRepositoryImpl: RecipeRepositoryImpl):
             RecipeRepository
 }

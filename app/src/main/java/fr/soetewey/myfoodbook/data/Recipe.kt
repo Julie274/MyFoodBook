@@ -1,7 +1,11 @@
 package fr.soetewey.myfoodbook.data
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "recipe_table")
 data class Recipe(
-    val id: Int,
+    @PrimaryKey var id: Int,
     val name: String,
     val image: String,
     val ingredients: List<Ingredient>,
