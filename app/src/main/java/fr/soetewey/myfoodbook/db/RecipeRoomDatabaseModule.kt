@@ -12,19 +12,22 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 @Module
 object RecipeRoomDatabaseModule {
-/*
     @Provides
-    fun provideRecipeDao(recipeRoomDatabase: RecipeRoomDatabase): RecipeDAO{
+    fun provideRecipeDao(
+        recipeRoomDatabase: RecipeRoomDatabase
+    ): RecipeDAO{
         return recipeRoomDatabase.recipeDao()
     }
 
     @Provides
     @Singleton
-    fun provideRecipeRoomDatabase(@ApplicationContext appContext: Context): RecipeRoomDatabase{
+    fun provideRecipeRoomDatabase(
+        @ApplicationContext appContext: Context
+    ): RecipeRoomDatabase{
         return Room.databaseBuilder(
             appContext.applicationContext,
             RecipeRoomDatabase::class.java,
             "recipe_database"
         ).build()
-    }*/
+    }
 }

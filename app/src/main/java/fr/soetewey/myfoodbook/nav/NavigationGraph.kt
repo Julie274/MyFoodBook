@@ -14,8 +14,7 @@ import fr.soetewey.myfoodbook.view.RecipeScreen
 @Composable
 fun NavigationGraph(
     modifier: Modifier = Modifier,
-    navController: NavHostController = rememberNavController(),
-    startDestination: String = "profile"
+    navController: NavHostController = rememberNavController()
 ) {
     NavHost(
         modifier = modifier,
@@ -36,22 +35,3 @@ fun NavigationGraph(
         }
     }
 }
-/*
-@Composable
-@SuppressLint("UnusedTransitionTargetStateParameter")
-fun NavigationGraph(navController: NavHostController = rememberNavController()){
-    NavHost(
-        navController = navController,
-        startDestination = Screen.RecipeListScreen.route
-    ) {
-        composable(Screen.RecipeListScreen.route) {
-            RecipeListScreen(navController)
-        }
-        composable(Screen.AddRecipeScreen.route) {
-            AddRecipeScreen(navController)
-        }
-        composable(Screen.RecipeScreen.route) {
-            RecipeScreen(navController)
-        }
-    }
-}*/

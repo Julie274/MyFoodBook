@@ -78,6 +78,8 @@ dependencies {
     val activity_version = "1.6.1"
     //noinspection GradleDependency
     implementation("androidx.activity:activity:$activity_version")
+    implementation("androidx.activity:activity-compose:1.8.2")
+    implementation("androidx.activity:activity-ktx:1.8.2")
     //noinspection GradleDependency
     implementation("androidx.navigation:navigation-compose:$nav_version")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
@@ -86,6 +88,7 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:$roomVersion")
     kapt("androidx.room:room-compiler:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
+    implementation("io.coil-kt:coil-compose:2.2.2")
 
 }
 

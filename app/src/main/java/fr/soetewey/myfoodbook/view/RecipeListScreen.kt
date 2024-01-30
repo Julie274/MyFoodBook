@@ -1,6 +1,7 @@
 package fr.soetewey.myfoodbook.view
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,7 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import fr.soetewey.myfoodbook.nav.Screen
+import fr.soetewey.myfoodbook.ui.theme.FlashyRed
 import fr.soetewey.myfoodbook.viewmodel.RecipeViewModel
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -41,6 +42,8 @@ fun RecipeListScreen(
         Scaffold(
             topBar = {
                 TopAppBar(
+                    modifier = Modifier
+                        .background(FlashyRed),
                     title = {
                         Text(
                             text = "Ma liste de recette"
